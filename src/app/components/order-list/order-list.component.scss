@@ -1,0 +1,26 @@
+
+table {
+  width: 50%;
+  background-color: #ffffff;
+  margin: 2% auto auto;
+}
+
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  background-color: rgba(227, 225, 225, 0.2);
+}
+
+.mdc-data-table__table {
+  min-width: 50%;
+  width: 50%;
+}
+
+
+
+

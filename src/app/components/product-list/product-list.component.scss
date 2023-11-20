@@ -1,0 +1,121 @@
+.product-list-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    border: none;
+    width: 50%;
+    margin: 2% auto auto;
+    line-height: 30px;
+    border-bottom: 1px solid black;
+    padding: 0;
+  }
+
+  table {
+    width: 50%;
+    margin: auto;
+    background-color: #ffffff;
+
+    .button-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+
+  .check-order-btn {
+    background-color: #fc8c3c !important;
+    display: flex;
+    margin: 2% auto auto;
+    padding: 1rem;
+  }
+
+  .popup {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.15);
+    top: 0;
+
+    .popup-wrapper {
+      margin: 3% auto auto;
+      background-color: white;
+      position: relative;
+      height: 25rem;
+      width: 20rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+      border-radius: 5px;
+
+      .check-mark {
+        position: absolute;
+        height: 5rem;
+        width: 5rem;
+        background-color: #00C851;
+        top: -3rem;
+        left: 0;
+        right: 0;
+        border-radius: 50%;
+        text-align: center;
+        padding: 10px;
+        margin: auto;
+
+        mat-icon {
+          color: white;
+          font-size: 80px;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .product-added {
+        text-align: center;
+        font-size: 20px;
+        padding-top: 60%;
+        line-height: 30px;
+        font-weight: 600;
+        color: rgb(68, 68, 68);
+      }
+
+      .close-btn {
+        width: 100%;
+        font-size: 20px;
+        font-weight: 700;
+        border: none;
+        padding: 1rem;
+        background-color: #00C851;
+
+        &:hover {
+          background-color: #02bb4e;
+        }
+      }
+    }
+  }
+
+  .mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+  .mat-mdc-row:hover .mat-mdc-cell {
+    background-color: rgba(227, 225, 225, 0.2);
+  }
+
+  .mdc-data-table__table {
+    min-width: 50%;
+    width: 50%;
+  }
+
+  .mat-column-actions {
+    text-align: center !important;
+  }
+
+  .mat-sort-header-container {
+    align-items: center;
+  }
+
+}

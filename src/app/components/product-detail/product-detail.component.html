@@ -1,0 +1,9 @@
+<div *ngIf="product | async as product" class="details-wrapper">
+  <div class="title-wrapper">
+    <div class="id"> {{product.id}}.</div>
+    <div class="name">{{product.name}}</div>
+  </div>
+  <div class="description">{{product.description}}</div>
+  <img src="{{product.featuredAsset.preview}}" alt="preview">
+</div>
+

@@ -1,0 +1,45 @@
+<div class="product-list-wrapper">
+  <input matInput (keyup)="filterProducts($event)" placeholder="Find..." #input>
+  <table matSort (matSortChange)="sortData($event)" mat-table [dataSource]="sortedData" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-sort-header="id" mat-header-cell *matHeaderCellDef> No.</th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-sort-header="name" mat-header-cell *matHeaderCellDef> Name</th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> Actions</th>
+      <td mat-cell *matCellDef="let element">
+        <div class="button-wrapper">
+          <button mat-raised-button (click)="addToCard(element.id)">
+            ADD
+          </button>
+          <button mat-raised-button color="primary" (click)="openProductDetails(element.id)">
+            OPEN
+          </button>
+        </div>
+
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns;"
+    ></tr>
+  </table>
+  <button mat-raised-button class="check-order-btn" (click)="openOrdersList()">CHECK ORDERS</button>
+  <div id="customPopup" class="popup">
+    <div class="popup-wrapper">
+      <div class="check-mark">
+        <mat-icon>done</mat-icon>
+      </div>
+      <div class="product-added">Product added to cart SUCCESSFULLY</div>
+      <button class="close-btn" (click)="closePopup()">OK</button>
+    </div>
+  </div>
+</div>
